@@ -1,0 +1,12 @@
+
+const ContactSection = () => {
+    return (
+        <div>
+            <h1>Contact Us</h1>
+            <p>Phone: 123-456-7890</p>
+            <p>Email: contact@example.com</p>
+        </div>
+    );
+};
+
+export default ContactSection;

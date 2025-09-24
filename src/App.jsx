@@ -1,9 +1,17 @@
+import ContactSection from "./component/ContactSection";
+import Footer from "./component/Footer";
+import Header from "./component/Header"
+import Hero from "./component/Hero";
 
 const App = () => {
   return (
     <div>
-      <h1>welcome to react</h1>
+      <Header />
+      <Hero />
+      <ContactSection />
+      <Footer />
     </div>
+
   );
 };
 
