@@ -1,15 +1,9 @@
-import ContactSection from "./component/ContactSection";
-import Footer from "./component/Footer";
-import Header from "./component/Header"
-import Hero from "./component/Hero";
+
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <Hero />
-      <ContactSection />
-      <Footer />
+     <button onClick={() => {alert("Button Clicked!")}} style={{color: "red"}}>Click Me</button>
     </div>
 
   );
