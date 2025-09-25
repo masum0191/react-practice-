@@ -1,16 +1,18 @@
 
+const loginStatus=(status)=>{
+  if(status){
+    return <button>Logout</button>
+  }
+  else{
+    return <button>Login</button>
+  }
+
+}
 const App = () => {
-  let city = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"];
   return (
     <div>
-      <h1>City List</h1>
-      <ol>
-        {
-          city.map((item,i)=>{
-            return <li key={i.toString}>{item}</li>
-          })
-        }
-      </ol>
+      <h1>Login Status</h1>
+      {loginStatus(true)}
     </div>
 
   );
