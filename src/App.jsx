@@ -1,18 +1,15 @@
 
 
 const App = () => {
-  const status = true;
+  let status = false;
   return (
     <div>
-     
-{
-  status?
-<button>logout</button>
-:
-<button>login</button>
-}
+      <h1>Login Status</h1>
+      {
+        status && <h2>Logged In</h2>
+      }
     </div>
-
+   
   );
 };
 
