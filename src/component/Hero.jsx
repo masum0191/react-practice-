@@ -1,10 +1,9 @@
 
-const Hero = () => {
+const Hero = (props) => {
     return (
         <div>
-            <h1>Welcome to Our Website</h1>
-            <p>Your success starts here.</p>
-            <img src="https://picsum.photos/200/300" alt="" />
+            <h1>{props.title}</h1>
+            <p>{props.description}</p>
         </div>
     );
 };

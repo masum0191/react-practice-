@@ -1,18 +1,9 @@
-
+import Hero from "./component/Hero";
 
 const App = () => {
-  let status = true;
   return (
     <div>
-      <h1>Login Status</h1>
-      {(()=>{
-        if (status ==true){
-        return <button>logout</button>
-        }else{
-          return <button>login</button>
-        }
-
-      })()}
+     <Hero  title="Welcome to Our Website"  description="Your success starts here." />
     </div>
    
   );
