@@ -1,18 +1,15 @@
-import Hero from "./component/Hero";
 
+import { useRef } from 'react';
 const App = () => {
-  const handleSubmit = (event)=>{
-    event.preventDefault();
-    alert("Form Submitted");
+let myHeadline=useRef();
+const changehead=()=>{
+  myHeadline.innerText="Hello World"
+}
 
-  }
-  
   return (
     <div>
-     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Enter your name" />
-      <button type="submit">Submit</button>
-    </form>
+    <h1 ref={(h1)=>myHeadline=h1}></h1>
+    <button onClick={changehead}>Click Me</button>
     </div>
   );
 };
