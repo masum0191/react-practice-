@@ -1,23 +1,19 @@
 
 import { useRef } from 'react';
 const App = () => {
-let firstName,lastName=useRef();
 
-
+const number=useRef(0);
 
 const changehead=()=>{
-
-   let fName=firstName.value;
-   let lName=lastName.value;
-   alert(`First Name is ${fName} and Last Name is ${lName}`);
+number.current++;
+console.log(number.current);
 
 
   }
 
   return (
     <div>
-      <input type="text"  ref={(a)=>firstName=a} />
-      <input type="text"  ref={(a)=>lastName=a} />
+      <h1 className='text-primary'>Hello World</h1>
     <button onClick={changehead}>Click Me</button>
     </div>
   );
