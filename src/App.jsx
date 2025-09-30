@@ -1,20 +1,30 @@
 
 import { useRef } from 'react';
 const App = () => {
-
-const number=useRef(0);
-
-const changehead=()=>{
-number.current++;
-console.log(number.current);
-
-
+  const dataRef = useRef(null);
+  let Ptagdata=useRef();
+  const getData= async()=>{
+    const response= await fetch('https://dummyjson.com/products');
+    dataRef.current= await response.json();
   }
+  const showData=()=>{
+    Ptagdata.current.innerHTML=JSON.stringify(dataRef.current);
+  }
+
+
+
+  
 
   return (
     <div>
-      <h1 className='text-primary'>Hello World</h1>
-    <button onClick={changehead}>Click Me</button>
+      <h1>Fetch API Data and Display on Button Click</h1>
+      
+      {/* all data show here */}
+      <pre ref={Ptagdata}></pre>
+      {/* all data show here */}
+      <hr/>
+      <button onClick={getData}>Get Data</button>
+      <button onClick={showData}>Show Data</button>
     </div>
   );
 };
