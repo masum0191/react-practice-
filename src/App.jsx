@@ -1,15 +1,22 @@
 
-import { useRef, useState } from 'react';
+import React, { useState } from 'react';
+
 const App = () => {
-  const [number, changeNumber] = useState(0);
-  const incrementNumber = () => {
-    changeNumber(number - 1);
-  }
+  const [myObject, setMyObject] = useState({ name: "John", age: 30 });
+  const updateObject = () => {
+    setMyObject((prevObject) => ({
+      ...prevObject,
+      name: 'Mary',
+      age: 25
+    }));
+  };
+
   return (
     <div>
-      <h1>Fetch API Data and Display on Button Click</h1>
-      <p>Number: {number}</p>
-      <button onClick={incrementNumber}>Increment</button>
+      <h1>Hello, World!</h1>
+      <p>Name: {myObject.name}</p>
+      <p>Age: {myObject.age}</p>
+      <button onClick={updateObject}>Update Object</button>
     </div>
   );
 };
