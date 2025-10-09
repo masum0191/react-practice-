@@ -1,24 +1,22 @@
 
-import React, { use, useEffect } from 'react';
-import { useState } from 'react';
 
+import React from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Aboutoage from "./pages/Aboutoage";
+import ProductPage from "./pages/ProductPage";
+import NotFountPage from "./pages/NotFountPage";
 const App = () => {
-const[data,setData]=useState();
-
-useEffect(() => {
-  (async()=>{
-    let response=await fetch('https://appsdevelopmentfirm.agency/admin/site/api/airports')
-    let json=await response.json()
-    setData(json)
-  })
-  ()
-}, []);
-
-
-
   return (
     <div>
-      {JSON.stringify(data)}
+       <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage/>}/>  
+        <Route path="about-page" element={<Aboutoage/>}/>
+        <Route path="product-page" element={<ProductPage/>}/>
+        <Route path="*" element={<NotFountPage/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 };
