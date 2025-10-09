@@ -6,9 +6,12 @@ const App = () => {
 const[data,setData]=useState();
 
 useEffect(() => {
-  fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then(res=>res.json()
-    .then(json=>setData(json)))
+  (async()=>{
+    let response=await fetch('https://appsdevelopmentfirm.agency/admin/site/api/airports')
+    let json=await response.json()
+    setData(json)
+  })
+  ()
 }, []);
 
 
