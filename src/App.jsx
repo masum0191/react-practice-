@@ -12,8 +12,8 @@ const App = () => {
        <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage/>}/>  
-        <Route path="about-page" element={<Aboutoage/>}/>
-        <Route path="product-page" element={<ProductPage/>}/>
+        <Route path="about" element={<Aboutoage/>}/>
+        <Route path="products" element={<ProductPage/>}/>
         <Route path="*" element={<NotFountPage/>}/>
       </Routes>
       </BrowserRouter>
